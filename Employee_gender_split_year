@@ -4,6 +4,7 @@ Filename: employees_gender_split_year.sql
     Date: 28/03/2020
     Description:
     This SQL file joins two SQL schemas together in order to assess the gender split of employees in an organisation for each year
+    also includes a HAVING clause allowing you to filter by date
     #
 
 
