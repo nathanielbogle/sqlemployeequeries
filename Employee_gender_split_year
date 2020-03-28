@@ -1,0 +1,15 @@
+#
+Filename: employees_gender_split_year.sql
+    Author: Nathaniel Bogle
+    Date: 28/03/2020
+    Description:
+    This SQL file joins two SQL schemas together in order to assess the gender split of employees in an organisation for each year
+    #
+
+
+SELECT  YEAR(t_dept_emp.from_date) AS calendar_year, t_employees.gender, COUNT(t_employees.gender) AS number_of_employees
+FROM t_employees
+JOIN t_dept_emp
+ON t_employees.emp_no = t_dept_emp.emp_no
+GROUP BY calendar_year, t_employees.gender 
+HAVING calendar_year >= 1990;
